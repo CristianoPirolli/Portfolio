@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Cristiano Pirolli</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo" class="logo-icon">
+            <span>Cristiano.dev</span>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#sobre"><i class="fas fa-user"></i> Sobre</a></li>
+            <li><a href="#resumo"><i class="fas fa-briefcase"></i> Experiência</a></li>
+            <li><a href="#projetos"><i class="fas fa-code"></i> Projetos</a></li>
+            <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div id="particles-home" class="particles-section"></div>
+        <div class="hero-content">
+            <h1>
+                <span class="greeting">Olá, eu sou</span>
+                <span class="name highlight">Cristiano Pirolli</span>
+            </h1>
+            <p class="hero-description">Desenvolvedor Full Stack focado em experiências web e automações confiáveis.</p>
+            <p class="typing-text"></p>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div id="particles-sobre" class="particles-section"></div>
+        <div class="container">
+            <h2><span class="hash">#</span> Sobre Mim</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Cristiano Pirolli">
+                </div>
+                <div class="about-content">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-container">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">&gt;</span>
+                                <span class="terminal-output">Sou desenvolvedor Full Stack apaixonado por resolver desafios web.</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">&gt;</span>
+                                <span class="terminal-output">Programo em Python, estudo Ciência da Computação e acompanho tecnologias em alta.</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$ python3</span>
+                                <span class="terminal-output">&gt;&gt;&gt; print('Web + Backend + aprendizado contínuo')</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="devicon-python-plain colored"></i>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-django-plain colored"></i>
+                            <span class="skill-name">Django</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-flask-original colored"></i>
+                            <span class="skill-name">Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-linux-plain colored"></i>
+                            <span class="skill-name">Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-windows8-plain colored"></i>
+                            <span class="skill-name">Windows</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-git-plain colored"></i>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-github-original colored"></i>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span class="skill-name">HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span class="skill-name">CSS</span>
+                        </div>
+                    </div>
+                    <p class="bio">Combino os estudos em Ciência da Computação com paixão por tecnologia para entregar aplicações web completas e escaláveis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resumo">
+        <div id="particles-resumo" class="particles-section"></div>
+        <div class="container">
+            <h2><span class="hash">#</span> Resumo Profissional</h2>
+            <p class="section-description">Experiência prática desenvolvendo plataformas críticas para times contábeis e produtos comunitários.</p>
+            <div class="resume-grid">
+                <article class="resume-card">
+                    <h3>Portal Interno JP Contábil</h3>
+                    <p>Plataforma interna em Flask que orquestra autenticação, tarefas, reuniões, treinamentos, agenda, empresas/departamentos, anúncios, diretoria, procedimentos e finanças (notas de débito e cadastros) para a operação da JP.</p>
+                    <ul>
+                        <li>Arquitetura MVC: templates Jinja (app/templates), estáticos em app/static, lógica em app/controllers/routes.py, forms WTForms, modelos em app/models/tables.py e cache central em app/extensions/cache.py.</li>
+                        <li>Banco MySQL via mysql+pymysql com fallback automático para SQLite; cache de calendário, middleware de logs/performance e autocriação de colunas/tabelas legadas durante o bootstrap.</li>
+                        <li>Domínio rico: usuários/sessões, empresas, departamentos, consultorias, reuniões, agenda geral, cursos, tarefas, notificações, links de acesso, anúncios, diretoria, procedimentos operacionais, notas de débito, cadastros e trilha de auditoria.</li>
+                        <li>Funcionalidades principais: login/registro, CRUD completo, reuniões recorrentes com Google Calendar/Meet, cursos, tarefas colaborativas com anexos/seguidores/notificações, compartilhamento seguro, anúncios, diretoria, procedimentos, notas de débito, busca por CNPJ, envio de e-mail/push e proteções CSRF/WTForms.</li>
+                        <li>Integrações e serviços: Google OAuth/Calendar/Gmail, cache de calendário, lógica de salas e recorrência, notificações push, SSE/broadcast em memória, consulta de CNPJ, cursos/agenda, jobs leves em background.</li>
+                        <li>Segurança e observabilidade: CSRF, cookies HttpOnly/SameSite, segredo do .env, sanitização de HTML, CSP/HSTS/COOP/CORP/X-Frame/NoSniff, rate limiting configurável, limites de upload (5 GB), headers HTTPS; endpoints de health e middleware de performance com rastreamento por ID.</li>
+                    </ul>
+                    <div class="portal-gallery">
+                        <figure>
+                            <button class="portal-thumb" data-image="images/login.png">
+                                <img src="images/login.png" alt="Tela de login do portal JP Contábil">
+                            </button>
+                            <figcaption>Tela de login do Portal JP Contábil</figcaption>
+                        </figure>
+                        <figure>
+                            <button class="portal-thumb" data-image="images/home.png">
+                                <img src="images/home.png" alt="Página HOME do portal JP Contábil">
+                            </button>
+                            <figcaption>Página HOME do portal JP Contábil</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div id="particles-projetos" class="particles-section"></div>
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="projeto-card">
+                    <h3>Sistema de Gestão Bovina <span class="status-tag">Em Produção</span></h3>
+                    <p>Sistema web para controle de rebanho com registros de brincos, vacinação e histórico rastreável.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <a href="https://github.com/CristianoPirolli/Django-system" class="btn" target="_blank" rel="noreferrer">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Sistema de Cidadão Ativo</h3>
+                    <p>Componente comunitário em Flask/MySQL para registrar problemas sociais, abrir chamados ao poder público e mapear ocorrências via OpenStreetMap.</p>
+                    <div class="tech-stack">
+                        <span>Flask</span>
+                        <span>MySQL</span>
+                        <span>OpenStreetMap</span>
+                        <span>Responsivo</span>
+                    </div>
+                    <a href="https://github.com/CristianoPirolli/cidadao-ativo" class="btn" target="_blank" rel="noreferrer">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Sistema de Logística (Desktop)</h3>
+                    <p>Protótipo Python desktop que conecta veículos, motoristas e depósitos, calculando rotas mínimas com estruturas de grafos inspiradas em Huffman.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Grafos</span>
+                        <span>Huffman</span>
+                        <span>Desktop</span>
+                    </div>
+                    <a href="https://github.com/CristianoPirolli/Est.-Dados-II/tree/main/TrabalhoFinal" class="btn" target="_blank" rel="noreferrer">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>SeparaPDF</h3>
+                    <p>Utility Python/Qt6 para desktop que divide PDFs escaneados em arquivos separados usando pandas para lógica de páginas.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Qt6</span>
+                        <span>Desktop</span>
+                    </div>
+                    <a href="https://github.com/TI02-jp/separaPDF.git" class="btn" target="_blank" rel="noreferrer">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Sistema de Chamados TI</h3>
+                    <p>Em dupla, desenhamos um sistema de chamados em C++/Qt6 com SQLite, aplicando Singleton, Facade e State para o suporte de TI.</p>
+                    <div class="tech-stack">
+                        <span>C++</span>
+                        <span>Qt6</span>
+                        <span>SQLite</span>
+                        <span>Padrões</span>
+                    </div>
+                    <a href="https://github.com/alberthydev/sst.git" class="btn" target="_blank" rel="noreferrer">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Reserva Hotel BD I</h3>
+                    <p>Aplicação Python/PyQt5 criada para o curso de Banco de Dados I, gerencia funcionários, serviços e quartos com MariaDB.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>PyQt5</span>
+                        <span>MariaDB</span>
+                        <span>Desktop</span>
+                    </div>
+                    <a href="https://github.com/alberthydev/reserva-hotel-bd1.git" class="btn" target="_blank" rel="noreferrer">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div id="particles-contato" class="particles-section"></div>
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contato-info">
+                <a href="mailto:cristianopirolli@gmail.com" class="contato-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://wa.me/5549999033034" class="contato-item" target="_blank" rel="noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <div class="social-links contato-item">
+                    <a href="https://www.linkedin.com/in/cristiano-pirolli-9145a8324" target="_blank" rel="noreferrer">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="social-links contato-item">
+                    <a href="https://github.com/CristianoPirolli" target="_blank" rel="noreferrer">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cristiano Pirolli. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="portal-modal" class="portal-modal" aria-hidden="true">
+        <div class="portal-modal__content">
+            <button class="portal-modal__close" aria-label="Fechar visualização">&times;</button>
+            <img src="" alt="Visualização do portal">
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
