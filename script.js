@@ -81,13 +81,6 @@ ScrollReveal().reveal('.projeto-card', {
     reset: false
 });
 
-ScrollReveal().reveal('.resume-card', {
-    delay: 100,
-    distance: '30px',
-    duration: 600,
-    interval: 150,
-    reset: false
-});
 
 // Adicionar classes de animação aos ícones de habilidades
 document.querySelectorAll('.skill-icons i').forEach((icon, index) => {
@@ -96,9 +89,10 @@ document.querySelectorAll('.skill-icons i').forEach((icon, index) => {
 
 // Efeito de digitação
 const phrases = [
-    'Desenvolvedor Python',
-    'Backend Developer',
-    'Amante de Tecnologia'
+    'Desenvolvedor Full Stack',
+    'Python | Flask | Node.js',
+    'Vue 3 | TypeScript',
+    'Aprendizado Continuo'
 ];
 
 let currentPhraseIndex = 0;
@@ -210,7 +204,7 @@ const handleNavbarScroll = throttle(() => {
 window.addEventListener('scroll', handleNavbarScroll, { passive: true });
 
 // Adicionar efeito de hover aos cards com movimento do mouse (otimizado com requestAnimationFrame)
-document.querySelectorAll('.projeto-card, .resume-card, .skill-item').forEach(card => {
+document.querySelectorAll('.projeto-card, .skill-item').forEach(card => {
     let ticking = false;
 
     card.addEventListener('mousemove', (e) => {
@@ -276,7 +270,7 @@ const fadeInObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Aplicar animação de fade-in a elementos
-document.querySelectorAll('.projeto-card, .resume-card, .skill-item, .contato-item').forEach(el => {
+document.querySelectorAll('.projeto-card, .skill-item, .contato-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
