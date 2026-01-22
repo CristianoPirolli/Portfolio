@@ -56,7 +56,6 @@ body {
     color: var(--text-color);
     margin: 0;
     overflow-x: hidden;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="8" fill="%2300ff9f" opacity="0.3"/><circle cx="12" cy="12" r="3" fill="%2300ff9f"/></svg>') 12 12, auto;
 }
 
 body::before {
@@ -89,11 +88,9 @@ body::after {
         var(--neon-purple),
         transparent
     );
-    animation: scan 4s linear infinite;
     pointer-events: none;
     z-index: 9999;
     opacity: 0.3;
-    will-change: transform;
 }
 
 .navbar {
@@ -104,14 +101,10 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(10, 14, 39, 0.85);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 14, 39, 0.95);
     border-bottom: 1px solid rgba(0, 255, 159, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3),
-                0 0 15px rgba(0, 255, 159, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    will-change: background, box-shadow;
 }
 
 .navbar::before {
@@ -127,8 +120,6 @@ body::after {
         var(--neon-blue),
         transparent
     );
-    animation: gradient-shift 3s ease infinite;
-    background-size: 200% 200%;
 }
 
 .logo {
@@ -145,7 +136,6 @@ body::after {
     width: 28px;
     height: 28px;
     filter: drop-shadow(0 0 8px var(--neon-green));
-    animation: float 3s ease-in-out infinite;
 }
 
 .nav-links {
@@ -168,23 +158,6 @@ body::after {
     overflow: hidden;
 }
 
-.nav-links a::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(0, 255, 159, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.3s ease, height 0.3s ease;
-}
-
-.nav-links a:hover::before {
-    width: 200%;
-    height: 200%;
-}
 
 .nav-links a:hover,
 .nav-links a.active {
@@ -233,9 +206,6 @@ body::after {
         radial-gradient(circle at 20% 50%, rgba(0, 255, 159, 0.1), transparent 40%),
         radial-gradient(circle at 80% 80%, rgba(188, 19, 254, 0.1), transparent 40%);
     z-index: 0;
-    animation: gradient-shift 15s ease infinite;
-    background-size: 200% 200%;
-    will-change: background-position;
 }
 
 .hero::after {
@@ -269,9 +239,6 @@ body::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-size: 200% 200%;
-    animation: gradient-shift 5s ease infinite;
-    filter: drop-shadow(0 0 20px rgba(0, 255, 159, 0.5));
 }
 
 .hero-content .name {
@@ -324,20 +291,6 @@ body::after {
     box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-.btn:hover::before {
-    left: 100%;
-}
 
 .btn-secondary {
     background: transparent;
@@ -506,7 +459,6 @@ section {
     margin-right: 0.5rem;
     font-weight: 700;
     text-shadow: 0 0 15px rgba(57, 255, 20, 0.8);
-    animation: glow 2s ease-in-out infinite;
 }
 
 h2 {
@@ -631,7 +583,7 @@ h2 {
     border-radius: 16px;
     text-align: center;
     border: 2px solid rgba(0, 255, 159, 0.3);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -641,28 +593,10 @@ h2 {
     min-height: 130px;
 }
 
-.skill-item::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 159, 0.15), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.skill-item:hover::before {
-    opacity: 1;
-}
 
 .skill-item:hover {
-    transform: translateY(-8px) scale(1.05);
-    background: linear-gradient(135deg, rgba(0, 255, 159, 0.15), rgba(0, 191, 255, 0.15));
+    transform: translateY(-5px);
     border-color: var(--neon-green);
-    box-shadow: 0 10px 40px rgba(0, 255, 159, 0.4),
-                0 0 30px rgba(0, 255, 159, 0.3);
 }
 
 .skill-item i {
@@ -671,12 +605,6 @@ h2 {
     margin-bottom: 0.75rem;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 0 10px currentColor);
-    transition: transform 0.4s ease;
-}
-
-.skill-item:hover i {
-    transform: scale(1.15) rotateY(360deg);
 }
 
 .skill-name {
@@ -702,13 +630,11 @@ h2 {
 }
 
 .resume-card {
-    background: linear-gradient(135deg, rgba(10, 14, 39, 0.6), rgba(0, 78, 146, 0.3));
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.9), rgba(0, 78, 146, 0.3));
     padding: 1.5rem;
     border-radius: 16px;
     border: 1px solid rgba(0, 255, 159, 0.2);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5),
-                0 0 30px rgba(0, 255, 159, 0.15);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
 }
@@ -721,8 +647,6 @@ h2 {
     right: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--neon-green), var(--neon-blue), var(--neon-purple));
-    background-size: 200% 100%;
-    animation: gradient-shift 3s ease infinite;
 }
 
 
@@ -768,21 +692,6 @@ h2 {
     overflow: hidden;
 }
 
-.portal-gallery figure::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 159, 0.1), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.portal-gallery figure:hover::before {
-    opacity: 1;
-}
 
 .portal-gallery figure:hover {
     box-shadow: inset 0 0 0 1px rgba(0, 255, 159, 0.4),
@@ -892,43 +801,20 @@ h2 {
 }
 
 .projeto-card {
-    background: linear-gradient(135deg, rgba(10, 14, 39, 0.9), rgba(0, 78, 146, 0.6));
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95), rgba(0, 78, 146, 0.6));
     border-radius: 16px;
     padding: 1.5rem;
     border: 1px solid rgba(0, 255, 159, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
-                0 0 20px rgba(0, 255, 159, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.projeto-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-        transparent,
-        rgba(0, 255, 159, 0.1),
-        transparent
-    );
-    transition: left 0.6s ease;
-}
-
-.projeto-card:hover::before {
-    left: 100%;
-}
 
 .projeto-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-5px);
     border-color: var(--neon-green);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6),
-                0 0 40px rgba(0, 255, 159, 0.4),
-                inset 0 0 30px rgba(0, 255, 159, 0.1);
 }
 
 .projeto-card h3 {
@@ -981,7 +867,6 @@ h2 {
     margin-left: 0.5rem;
     font-weight: 700;
     box-shadow: 0 0 15px rgba(0, 255, 159, 0.5);
-    animation: glow 2s ease-in-out infinite;
 }
 
 .contato-info {
@@ -1005,34 +890,16 @@ h2 {
     text-decoration: none;
     color: #ffffff;
     border: 2px solid rgba(0, 255, 159, 0.3);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
     min-height: 140px;
 }
 
-.contato-item::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 159, 0.15), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.contato-item:hover::before {
-    opacity: 1;
-}
 
 .contato-item:hover {
-    transform: translateY(-8px) scale(1.03);
-    background: linear-gradient(135deg, rgba(0, 255, 159, 0.15), rgba(0, 191, 255, 0.15));
+    transform: translateY(-5px);
     border-color: var(--neon-green);
-    box-shadow: 0 10px 40px rgba(0, 255, 159, 0.4),
-                0 0 30px rgba(0, 255, 159, 0.2);
 }
 
 .contato-item i {
@@ -1040,12 +907,6 @@ h2 {
     position: relative;
     z-index: 1;
     color: var(--neon-green);
-    filter: drop-shadow(0 0 10px var(--neon-green));
-    transition: transform 0.4s ease;
-}
-
-.contato-item:hover i {
-    transform: scale(1.1) rotateY(360deg);
 }
 
 .contato-item span {
@@ -1076,7 +937,6 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 0 20px rgba(188, 19, 254, 0.5);
-    animation: glow 2s ease-in-out infinite;
 }
 
 .status-tag.production {
@@ -1317,8 +1177,6 @@ h2 {
 
 .projeto-pessoal::before {
     background: linear-gradient(90deg, var(--neon-blue), var(--neon-green), var(--neon-blue));
-    background-size: 200% 100%;
-    animation: gradient-shift 3s ease infinite;
 }
 
 .projeto-pessoal .project-badge {
@@ -1369,6 +1227,18 @@ h2 {
 .projeto-features span i {
     color: var(--neon-blue);
     font-size: 0.75rem;
+}
+
+/* Animação de fade-in leve */
+.fade-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-element.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .footer {
